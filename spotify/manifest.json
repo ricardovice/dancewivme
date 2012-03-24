@@ -2,10 +2,20 @@
 	"BundleType": "Application",
 	"AppIcon": {
 	},
+    "AddDescription": {
+        "en" : "Music Chat roulete"
+    },
 	"AppName": {
 		"en": "Dance Wiv Me"
 	},
 	"SupportedLanguages": [
 		"en"
-	]
+	],
+    "AppUrl": "http://dancewivme-api.appspot.com/",
+    "BundleIdentifier": "dancewivme", 
+    "BundleVersion": "0.0.1", 
+    "RequiredInterface": 1,
+    "BundleIdentifier": "dancewivme", 
+    "VendorIdentifier": "DaceWivMe.com", 
+    "RequiredPermissions": [ "http://dancewivme-api.appspot.com", "http://spotify.com" ]
 }

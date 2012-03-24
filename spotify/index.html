@@ -2,22 +2,41 @@
 <html>
 <head>
 	<title>Dance Wiv Me</title>
+    <script type="text/javascript" src="sp://dancewivme/js/jquery-1.7.2.min.js"></script>
 	<link href="sp://import/css/adam.css" rel="stylesheet">
+
+    <script type="text/javascript">
+    function get_my_stuff()
+    {
+        $('#info').html('.........running.......');
+        $.get('http://dancewivme-api.appspot.com/', function(data) {
+            $('#result').html(data);
+        });
+    }
+    </script>
+
+    <style>
+        body {
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+    </style>
+
 </head>
-<style>
-body {
-	background-image: url(zebra.gif);
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	height: 100%;
-}
-</style>
 <body>
-<script>
-var sp = getSpotifyApi(1);
-sp.trackPlayer.setRepeat(true);
-sp.trackPlayer.playTrackFromUri('spotify:track:2Slm8U9Ql1TlzHMC7gOCec',
-	{onSuccess: id, onFailure: id, onComplete: id});
-</script>
+
+    Location: <span id="location"></span>
+
+    <div id="info"></div>
+    <div id="result"><img src="sp://dancewivme/zebra.gif"></div>
+
+    <a onClick="get_my_stuff();" href="#" >get it</a>
+
+    <script type="text/javascript">
+        var sp = getSpotifyApi(1);
+        var models = sp.require('sp://import/scripts/api/models');
+        $("#location").html(models.session.country);
+    </script>
 </body>
 </html>
