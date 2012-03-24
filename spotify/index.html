@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dancewiv.me</title>
+	<link href="sp://import/css/adam.css" rel="stylesheet">
+</head>
+<style>
+body {
+	background-image: url(zebra.gif);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+</style>
+<body>
+<script>
+var sp = getSpotifyApi(1);
+sp.trackPlayer.setRepeat(true);
+sp.trackPlayer.playTrackFromUri('spotify:track:61wFTpbDy7Az1z1ixo7f4E',
+	{onSuccess: id, onFailure: id, onComplete: id});
+</script>
+</body>
+</html>

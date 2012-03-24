@@ -1,0 +1,11 @@
+{
+	"BundleType": "Application",
+	"AppIcon": {
+	},
+	"AppName": {
+		"en": "dancewivme"
+	},
+	"SupportedLanguages": [
+		"en"
+	]
+}
