@@ -23,6 +23,7 @@ var colorPurple = "#cb3594";
 var colorGreen = "#659b41";
 var colorYellow = "#ffcf33";
 var colorBrown = "#986928";
+var outlineImage = new Image();
 var crayonImage = new Image();
 var markerImage = new Image();
 var eraserImage = new Image();
@@ -118,6 +119,10 @@ function prepareCanvas()
 	crayonTextureImage.onload = function() { resourceLoaded(); 
 	}
 	crayonTextureImage.src = "images/crayon-texture.png";
+	
+	outlineImage.onload = function() { resourceLoaded(); 
+	}
+    outlineImage.src = "images/watermelon-duck-outline.png";
 
 	// Add mouse events
 	// ----------------
@@ -497,7 +502,6 @@ function redraw()
 		context.drawImage(crayonTextureImage, 0, 0, canvasWidth, canvasHeight);
 	}
 	context.globalAlpha = 1; // No IE support
-	
 }
 
 
