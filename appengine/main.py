@@ -22,6 +22,12 @@ class MainHandler(webapp.RequestHandler):
     def get(self):
         self.response.out.write('Dance Wiv Me!')
 
+    def post(self)
+        f = open("%s.png" % __file__, "wb"):
+        f.write(self.request.get('image_data'))
+        f.close()
+        self.response.out.write("OK")
+
 
 def main():
     application = webapp.WSGIApplication([('/', MainHandler)],

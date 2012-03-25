@@ -17,5 +17,5 @@
     "RequiredInterface": 1,
     "BundleIdentifier": "dancewivme", 
     "VendorIdentifier": "DaceWivMe.com", 
-    "RequiredPermissions": [ "http://dancewivme-api.appspot.com", "http://spotify.com" ]
+    "RequiredPermissions": [ "http://dancewivme-api.appspot.com", "http://spotify.com" , "http://localhost:8080/"]
 }
