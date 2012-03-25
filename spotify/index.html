@@ -1,42 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Dance Wiv Me</title>
+  <head>
+    <title>HTML5 Create HTML5 Canvas JavaScript Drawing App Example</title>
     <script type="text/javascript" src="sp://dancewivme/js/jquery-1.7.2.min.js"></script>
-	<link href="sp://import/css/adam.css" rel="stylesheet">
-
-    <script type="text/javascript">
-    function get_my_stuff()
-    {
-        $('#info').html('.........running.......');
-        $.get('http://dancewivme-api.appspot.com/', function(data) {
-            $('#result').html(data);
-        });
-    }
-    </script>
-
-    <style>
-        body {
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            height: 100%;
-        }
-    </style>
-
-</head>
-<body>
-
-    Location: <span id="location"></span>
-
-    <div id="info"></div>
-    <div id="result"><img src="sp://dancewivme/zebra.gif"></div>
-
-    <a onClick="get_my_stuff();" href="#" >get it</a>
-
-    <script type="text/javascript">
-        var sp = getSpotifyApi(1);
-        var models = sp.require('sp://import/scripts/api/models');
-        $("#location").html(models.session.country);
-    </script>
-</body>
+    <script type="text/javascript" src="sp://dancewivme/js/html5-canvas-drawing-app.js"></script>
+  </head>
+  <body>
+    <div id="canvasDiv"></div>
+    <script type="text/javascript"> $(document).ready(function() {
+    	 prepareCanvas();
+});</script>
+  </body>
 </html>
